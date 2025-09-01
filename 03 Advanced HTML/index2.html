@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Primer formulario</h2>
+    <form action="/enviar" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <br><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email">
+
+    <br><br>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje"></textarea>
+
+    <br><br>
+
+    <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Segundo formulario</h2>
+    <form action="/login" method="post">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario">
+
+    <br><br>
+
+    <label for="clave">Contraseña:</label>
+    <input type="password" id="clave" name="clave">
+
+    <br><br>
+
+    <button type="submit">Ingresar</button>
+    </form>
+
+    <h2>Tercer formulario</h2>
+    <form action="/registro" method="post">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <br><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email">
+
+    <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="1">
+
+    <br><br>
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Registrarme</button>
+    </form>
+</body>
+</html>
