@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Mi formulario básico</h1>
+
+    <form action="#" method="get"> <!-- Es la acción que ejecuta el formulario cuando hago submit -->
+        <label for="nombre1">Nombre completo: </label>
+        <input type="text" name="nombre1" >
+
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="Ingresa tu email..." required >
+
+        <br>
+        <label for="phone">Telefono: </label>
+        <input type="tel" name="phone" pattern="[0-9]{10}">
+
+        <br>
+        <label for="fecha">Nacimiento: </label>
+        <input type="date" name="fecha">
+
+        <br>
+        <label for="color">Color preferido: </label>
+        <input type="color" name="color" value="#0000FF"> <!-- #ffdc23 -->
+
+        <br>
+        <label for="pass">Contraseña: </label>
+        <input type="range" name="pass" min="1" max="10" value="5"> 
+
+        <br>
+        <label for="">Navegador preferido: </label>
+        <input list="browsers" autocomplete="yes">
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+        <br>
+        <label for="subject">Asunto: </label>
+        <textarea name="subject" id="" rows="10" cols="100"></textarea>
+
+        <br>
+        <button type="submit">Enviar!</button>
+    </form>
+
+    <h2>Herramienta de busqueda - Diccionario</h2>
+    <form action="#" method="get"> <!-- Es la acción que ejecuta el formulario cuando hago submit -->
+        <label for="termino">Termino: </label>
+        <input type="text" name="termino">
+
+        <br>
+        <button type="submit">Buscar!</button>
+    </form>
+</body>
+</html>
