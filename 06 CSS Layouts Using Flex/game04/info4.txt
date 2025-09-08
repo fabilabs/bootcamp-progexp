@@ -1,0 +1,29 @@
+🚀 Características de la versión final “Flexbox Challenge Pro”
+
+Niveles infinitos y aleatorios: cada instrucción se genera automáticamente.
+
+Más cajas: 4–6 cajas por nivel, con colores dinámicos.
+
+Timer por nivel: el jugador tiene un tiempo límite para resolver el nivel.
+
+Contador de intentos y puntaje: para gamificar y motivar.
+
+Feedback visual y sonoro (opcional, pero opcional para clase).
+
+Ranking básico local: puedes mostrar quién resolvió más rápido o con menos intentos.
+
+Responsive: funciona en móvil, tablet y escritorio.
+
+✅ Cómo funciona esta versión:
+
+Cada nivel es aleatorio: cambia justify-content, align-items y flex-direction.
+
+Timer de 30 segundos por nivel.
+
+Puntaje y intentos: motiva a mejorar.
+
+4–6 cajas de colores.
+
+Feedback inmediato: correcto → nuevo nivel, incorrecto → resta puntaje.
+
+Se puede usar en clase como competencia: el que más puntaje obtenga en X minutos gana.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo ::before y ::after</title>
+    <style>
+        /* Estilo al título */
+        h1 {
+        color: darkblue;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        }
+
+        /* Agregamos un ícono antes del texto */
+        h1::before {
+        content: "⭐ ";
+        color: gold;
+        }
+
+        /* Agregamos un ícono después del texto */
+        h1::after {
+        content: " ⭐";
+        color: gold;
+        }
+
+        /* Ejemplo con párrafo */
+        p::first-letter {
+        font-size: 2em;
+        font-weight: bold;
+        color: red;
+        }
+
+        p::first-line {
+        text-transform: uppercase;
+        color: green;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Hola Mundo</h1>
+        <p>
+            Este es un ejemplo de cómo funcionan los pseudo-elementos en CSS.
+            Observa que la primera letra es más grande y la primera línea está en mayúsculas.
+        </p>
+    </body>
+</html>

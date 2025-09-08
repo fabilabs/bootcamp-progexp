@@ -1,0 +1,11 @@
+✅ Cómo jugar:
+
+El contenedor empieza con 3 cajas.
+
+Selecciona justify-content, align-items y flex-direction para cumplir la instrucción.
+
+Presiona Aplicar.
+
+Si aciertas, pasa al siguiente nivel automáticamente.
+
+5 niveles de dificultad, de fácil a más desafiante.

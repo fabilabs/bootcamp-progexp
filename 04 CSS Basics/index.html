@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Consultores Profesionales S.A.S.</title>
+        <meta name="description" content="Servicios profesionales en consultoría, estrategia y desarrollo de software."/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Consultores Profesionales S.A.S.</h1>
+            <p>Soluciones de estrategia, tecnología y transformación digital para su empresa.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos">Quiénes somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="quienes-somos" aria-labelledby="titulo-quienes-somos">
+                <h2 id="titulo-quienes-somos">Quiénes somos</h2>
+                <article>
+                    <p>Somos un equipo multidisciplinario de ingenieros y consultores con más de 10 años de experiencia acompañando a organizaciones en proyectos de estrategia, optimización de procesos y desarrollo de software a la medida.</p>
+                    <p>Nuestro enfoque es <strong>práctico</strong>, <em>orientado a resultados</em> y apoyado en buenas prácticas de la industria.</p>
+                </article>
+                <aside>
+                    <p><small>Miembros de: Cámara de Comercio • Programa de Transformación Digital</small></p>
+                </aside>
+            </section>
+
+            <section id="servicios" aria-labelledby="titulo-servicios">
+                <h2 id="titulo-servicios">Servicios</h2>
+                <p>Estos son algunos de nuestros servicios principales:</p>
+
+                <!-- Tabla de servicios -->
+                <table>
+                    <caption>
+                        Portafolio de servicios
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Descripción</th>
+                            <th>Modalidad</th>
+                            <th>Desde (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Consultoría en Estrategia</td>
+                            <td>Diagnóstico, roadmap y gobierno de TI.</td>
+                            <td>Por proyecto</td>
+                            <td>2,500</td>
+                        </tr>
+                        <tr>
+                            <td>Desarrollo de Software</td>
+                            <td>Aplicaciones web y APIs a la medida.</td>
+                            <td>Tiempo y materiales</td>
+                            <td>4,000</td>
+                        </tr>
+                        <tr>
+                            <td>Integración de Sistemas</td>
+                            <td>Automatización y orquestación de procesos.</td>
+                            <td>Por proyecto</td>
+                            <td>3,000</td>
+                        </tr>
+                        <tr>
+                            <td>Capacitación In-House</td>
+                            <td>Talleres prácticos para equipos técnicos.</td>
+                            <td>Sesiones</td>
+                            <td>800</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <small>Los valores son de referencia y pueden variar según alcance.</small>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section id="clientes" aria-labelledby="titulo-clientes">
+                <h2 id="titulo-clientes">Clientes</h2>
+                <ul>
+                    <li>Sector Financiero</li>
+                    <li>Sector Salud</li>
+                    <li>Educación</li>
+                    <li>Startups de Tecnología</li>
+                </ul>
+            </section>
+
+            <section id="contacto" aria-labelledby="titulo-contacto">
+                <h2 id="titulo-contacto">Contacto</h2>
+                <p>Complete el siguiente formulario y nos pondremos en contacto:</p>
+
+                <!-- Formulario de contacto -->
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Datos de contacto</legend>
+
+                        <label for="nombre">Nombre completo</label><br />
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" required /><br /><br />
+
+                        <label for="correo">Correo electrónico</label><br />
+                        <input type="email" id="correo" name="correo" placeholder="correo@empresa.com" required /><br /><br />
+
+                        <label for="telefono">Teléfono</label><br />
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" /><br /><br />
+
+                        <label for="servicio">Servicio de interés</label><br />
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="estrategia">Consultoría en Estrategia</option>
+                            <option value="software">Desarrollo de Software</option>
+                            <option value="integracion">Integración de Sistemas</option>
+                            <option value="capacitacion">Capacitación</option>
+                        </select><br /><br />
+
+                        <label for="mensaje">Mensaje</label><br />
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntenos brevemente su necesidad" required></textarea><br /><br />
+
+                        <input type="checkbox" id="acepto" name="acepto" required />
+                        <label for="acepto">Acepto ser contactado(a) con fines comerciales</label><br /><br />
+
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpiar</button>
+                    </fieldset>
+                </form>
+
+                <address>
+                    <p>
+                        <strong>Oficina principal</strong><br />
+                        Calle 123 #45-67, Bogotá, Colombia<br />
+                        Tel: +57 1 123 4567<br />
+                        <a href="mailto:contacto@consultorespro.co">contacto@consultorespro.co</a>
+                    </p>
+                </address>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Consultores Profesionales S.A.S. — Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

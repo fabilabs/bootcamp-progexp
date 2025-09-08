@@ -1,0 +1,166 @@
+/* Resetear estilos basicos del documento HTML */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* Atajo de teclado para comentar en VS Code "Ctrl + }" */
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, table, form, fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+/* Estilos del header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #046;
+    color: white;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #069;
+    margin-top: 10px;
+}
+
+nav ul  {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos a las secciones de contenido principal del sitio web */
+section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #DDD;
+}
+
+/* Estilos de la tabla de servicios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    background-color: #046;
+    color: white;
+}
+
+thead th {
+    text-align: center;
+}
+
+tfoot td {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Estilos de la seccion de clientes */
+#clientes ul {
+    list-style: square inside;
+    padding-left: 20px;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    margin-top: 15px;
+}
+
+fieldset {
+    padding: 15px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #FFF;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* estilo de los botones del formulario  */
+button {
+    background-color: #069;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #046;
+}
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #046;
+    color: white;
+    margin-top: 20px;
+}

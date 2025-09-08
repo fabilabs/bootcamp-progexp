@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+        <title>Ejemplo box-sizing</title>
+        <style>
+            .caja {
+                position: relative;
+                width: 200px;
+                height: 100px;
+                background: lightblue;
+                margin: 20px;
+                text-align: center;
+                line-height: 100px;
+                font-weight: bold;
+            }
+
+            .caja::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 10px solid red;
+                box-sizing: border-box; /* El borde se incluye en el tamaño total */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="caja">Caja con ::after</div>
+    </body>
+</html>

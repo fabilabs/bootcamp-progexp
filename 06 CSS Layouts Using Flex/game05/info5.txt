@@ -1,0 +1,39 @@
+🏆 Características de la versión Bootcamp Flexbox Battle
+
+Varios jugadores (local en la misma máquina o clase virtual).
+
+Ranking en tiempo real: puntos por nivel completado y rapidez.
+
+Niveles aleatorios infinitos: instrucciones nuevas cada vez.
+
+Feedback visual y de puntaje instantáneo.
+
+Temporizador por nivel para sumar presión divertida.
+
+Cajas de colores dinámicas, para visualizar mejor la alineación.
+
+💡 Cómo funciona
+
+Cada estudiante ingresa su nombre al inicio.
+
+Se genera un nivel aleatorio para todos.
+
+Cada jugador aplica su combinación de Flexbox.
+
+Si acierta:
+
+Suma puntos según rapidez y número de intentos.
+
+Aparece en un ranking local de la sesión.
+
+Después de un tiempo definido o cierto número de niveles, termina la partida y se muestra el ganador.
+
+✅ Cómo usarlo:
+
+Cada estudiante ingresa su nombre al inicio.
+
+Todos compiten en tiempo real local (misma pantalla o proyector).
+
+Ranking visible: motivación extra para la competencia.
+
+Puedes hacer que cada estudiante tenga su turno de 30–60 segundos y luego pasar al siguiente.

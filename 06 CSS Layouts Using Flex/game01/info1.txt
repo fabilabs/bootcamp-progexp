@@ -1,0 +1,39 @@
+🎯 Idea del juego: “Ordena las cajas”
+
+Objetivo del jugador:
+
+Tienes varias cajas dentro de un contenedor.
+
+Debes alinearlas según la instrucción usando propiedades Flexbox (justify-content, align-items, flex-direction).
+
+Si lo haces bien, se ilumina y pasa al siguiente nivel.
+
+🕹️ Concepto del juego
+
+Contenedor: un div con display: flex.
+
+Cajas: varios divs de colores dentro del contenedor.
+
+Instrucción: el juego dice “Alinea las cajas al centro horizontalmente” o “Pon las cajas en columna con espacio entre ellas”.
+
+Input: botones o selectores que aplican clases al contenedor.
+
+Feedback: el contenedor cambia y si coincide con la instrucción, aparece un mensaje “¡Correcto!” y pasa al siguiente reto.
+
+✅ Cómo funciona
+
+El contenedor empieza con display: flex.
+
+Los estudiantes seleccionan justify-content y align-items para cumplir la instrucción.
+
+Cuando aciertan, reciben un mensaje positivo.
+
+🚀 Ideas para expandir el juego
+
+Niveles progresivos: cambiar la instrucción cada vez (flex-direction, wrap, space-between, etc.).
+
+Más cajas: jugar con 4–6 cajas.
+
+Tiempo o puntos: medir rapidez para gamificar.
+
+Random instructions: generar instrucciones automáticamente para practicar varias propiedades.

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Game Mejorado</title>
+<style>
+  body { font-family: sans-serif; text-align: center; margin: 20px; background: #f0f0f0; }
+  h1 { margin-bottom: 10px; }
+  #contenedor {
+    display: flex;
+    border: 3px dashed #333;
+    height: 200px;
+    margin: 20px auto;
+    width: 80%;
+    transition: all 0.5s;
+    background: white;
+  }
+  .caja {
+    width: 50px; height: 50px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+  }
+  select, button { margin: 5px; padding: 5px 10px; font-size: 1em; }
+  #resultado { font-weight: bold; margin-top: 10px; }
+  #puntaje { font-weight: bold; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h1>🎮 Juego Flexbox Mejorado</h1>
+<p id="instruccion">Instrucción: </p>
+
+<div id="contenedor">
+  <div class="caja">1</div>
+  <div class="caja">2</div>
+  <div class="caja">3</div>
+  <div class="caja">4</div>
+</div>
+
+<div>
+  <label>Justify Content:</label>
+  <select id="justify">
+    <option value="flex-start">flex-start</option>
+    <option value="center">center</option>
+    <option value="flex-end">flex-end</option>
+    <option value="space-between">space-between</option>
+    <option value="space-around">space-around</option>
+  </select>
+
+  <label>Align Items:</label>
+  <select id="align">
+    <option value="flex-start">flex-start</option>
+    <option value="center">center</option>
+    <option value="flex-end">flex-end</option>
+    <option value="stretch">stretch</option>
+  </select>
+
+  <label>Flex Direction:</label>
+  <select id="direction">
+    <option value="row">row</option>
+    <option value="column">column</option>
+  </select>
+
+  <button onclick="aplicar()">Aplicar</button>
+</div>
+
+<p id="resultado"></p>
+<p id="puntaje">Puntaje: 0 | Intentos: 0</p>
+
+<script>
+const contenedor = document.getElementById('contenedor');
+const resultado = document.getElementById('resultado');
+const instruccion = document.getElementById('instruccion');
+const puntajeTxt = document.getElementById('puntaje');
+
+const colores = ["crimson", "seagreen", "steelblue", "orange", "purple", "teal"];
+let nivelActual = 0;
+let puntaje = 0;
+let intentos = 0;
+
+const niveles = [
+  { justify: 'center', align: 'center', direction: 'row', texto: 'Nivel 1: Centra las cajas horizontal y verticalmente' },
+  { justify: 'space-between', align: 'center', direction: 'row', texto: 'Nivel 2: Espacia las cajas horizontalmente y centra verticalmente' },
+  { justify: 'center', align: 'flex-end', direction: 'row', texto: 'Nivel 3: Centra horizontal y alinea al fondo verticalmente' },
+  { justify: 'space-around', align: 'flex-start', direction: 'column', texto: 'Nivel 4: Columna con espacio alrededor y alinea arriba' },
+  { justify: 'flex-end', align: 'flex-end', direction: 'column', texto: 'Nivel 5: Columna alineada al fondo y derecha' }
+];
+
+function asignarColores() {
+  const cajas = contenedor.children;
+  for(let i=0; i<cajas.length; i++) {
+    cajas[i].style.background = colores[i % colores.length];
+  }
+}
+
+function cargarNivel() {
+  asignarColores();
+  const n = niveles[nivelActual];
+  instruccion.textContent = n.texto;
+  contenedor.style.justifyContent = 'flex-start';
+  contenedor.style.alignItems = 'flex-start';
+  contenedor.style.flexDirection = 'row';
+  resultado.textContent = '';
+  document.getElementById('justify').value = 'flex-start';
+  document.getElementById('align').value = 'flex-start';
+  document.getElementById('direction').value = 'row';
+}
+
+function aplicar() {
+  const justify = document.getElementById('justify').value;
+  const align = document.getElementById('align').value;
+  const direction = document.getElementById('direction').value;
+
+  contenedor.style.justifyContent = justify;
+  contenedor.style.alignItems = align;
+  contenedor.style.flexDirection = direction;
+
+  intentos++;
+  const n = niveles[nivelActual];
+  if(justify === n.justify && align === n.align && direction === n.direction) {
+    resultado.textContent = '¡Correcto! 🎉';
+    puntaje += 10;
+    nivelActual++;
+    if(nivelActual < niveles.length) {
+      setTimeout(cargarNivel, 1500);
+    } else {
+      resultado.textContent = '¡Felicidades! Completaste todos los niveles 🏆';
+    }
+  } else {
+    resultado.textContent = 'Intenta de nuevo 😅';
+    puntaje = Math.max(0, puntaje - 1);
+  }
+  puntajeTxt.textContent = `Puntaje: ${puntaje} | Intentos: ${intentos}`;
+}
+
+cargarNivel();
+</script>
+
+</body>
+</html>

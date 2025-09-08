@@ -1,0 +1,35 @@
+🌐 Flexbox Battle Online – Características
+
+Multijugador en tiempo real: cada estudiante en su dispositivo.
+
+Ranking en vivo: se actualiza automáticamente al completar niveles.
+
+Niveles aleatorios infinitos: cada nivel cambia justify-content, align-items y flex-direction.
+
+Contador de tiempo por nivel: presión divertida y motivadora.
+
+Sistema de puntaje: más rápido = más puntos, menos intentos = más puntos.
+
+Visual atractivo: cajas de colores dinámicas.
+
+Servidor mínimo: puede funcionar con Node.js + Socket.io para comunicación en tiempo real.
+
+🔹 Stack recomendado
+
+Frontend: HTML + CSS + JS (como los juegos anteriores).
+
+Backend: Node.js con Express + Socket.io.
+
+Función: sincronizar niveles y puntajes entre todos los jugadores conectados.
+
+🔹 Cómo funciona en la práctica
+
+Montas el servidor Node.js (node server.js).
+
+Cada estudiante entra desde su navegador a http://<IP-servidor>:3000.
+
+Se registran con su nombre y empiezan a jugar.
+
+Cada vez que completan un nivel, el servidor actualiza el ranking en vivo para todos.
+
+Puedes definir un tiempo total de la partida y luego declarar ganador.

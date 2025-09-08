@@ -1,0 +1,46 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Battle Online</title>
+<script src="/socket.io/socket.io.js"></script>
+<style>
+/* ... mismo CSS de los juegos anteriores ... */
+</style>
+</head>
+<body>
+<h1>🎮 Flexbox Battle Online</h1>
+<p>Nombre: <input type="text" id="nombre"><button onclick="registrar()">¡Listo!</button></p>
+<p id="instruccion"></p>
+<div id="contenedor"></div>
+<p id="resultado"></p>
+<h3>🏅 Ranking en vivo</h3>
+<ul id="ranking"></ul>
+
+<script>
+const socket = io();
+let jugador = '';
+
+function registrar() {
+  jugador = document.getElementById('nombre').value || 'Anónimo';
+  socket.emit('registrarJugador', jugador);
+  generarNivel();
+}
+
+socket.on('ranking', data => {
+  const rankingList = document.getElementById('ranking');
+  rankingList.innerHTML = '';
+  data.sort((a,b)=>b.puntaje - a.puntaje).forEach(j => {
+    const li = document.createElement('li');
+    li.textContent = `${j.nombre}: ${j.puntaje} pts`;
+    rankingList.appendChild(li);
+  });
+});
+
+// Aquí iría la lógica del juego (generarNivel, aplicar) similar a la versión offline
+// Al completar nivel:
+// socket.emit('nivelCompletado', puntos);
+</script>
+</body>
+</html>

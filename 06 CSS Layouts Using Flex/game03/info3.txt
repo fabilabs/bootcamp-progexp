@@ -1,0 +1,25 @@
+✨ Mejoras que tendrá esta versión:
+
+Más cajas: 4–6 cajas por nivel.
+
+Colores dinámicos: cada caja cambia de color al pasar de nivel.
+
+Contador de intentos y puntos: motiva a probar varias combinaciones.
+
+Timer opcional: se puede medir cuánto tarda cada estudiante.
+
+Niveles progresivos: instrucciones más complejas a medida que avanzan.
+
+Feedback visual: cajas se mueven suavemente al aplicar cambios.
+
+✅ Lo que hace este juego:
+
+4–6 cajas de colores, fáciles de ver.
+
+Cada nivel tiene una instrucción diferente para practicar justify-content, align-items y flex-direction.
+
+Puntaje y contador de intentos, para motivar a mejorar.
+
+Transiciones suaves para que el movimiento de cajas se vea claro.
+
+Cambia colores de cajas por nivel, haciendo visualmente atractivo.

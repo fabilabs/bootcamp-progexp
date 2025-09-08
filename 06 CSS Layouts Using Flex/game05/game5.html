@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Battle Bootcamp</title>
+<style>
+  body { font-family: sans-serif; text-align: center; margin: 20px; background: #f0f0f0; }
+  h1 { margin-bottom: 10px; }
+  #contenedor { display: flex; border: 3px dashed #333; height: 200px; margin: 20px auto; width: 80%; transition: all 0.5s; background: white; }
+  .caja { width: 50px; height: 50px; margin: 5px; display: flex; justify-content: center; align-items: center; font-weight: bold; border-radius: 5px; color: white; transition: all 0.5s; }
+  select, button, input { margin: 5px; padding: 5px 10px; font-size: 1em; }
+  #resultado, #puntaje, #timer, #ranking { font-weight: bold; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h1>🎮 Flexbox Battle Bootcamp</h1>
+
+<p>Jugador: <input type="text" id="jugador" placeholder="Tu nombre"><button onclick="registrarJugador()">¡Listo!</button></p>
+
+<p id="instruccion">Instrucción: </p>
+
+<div id="contenedor"></div>
+
+<div>
+  <label>Justify Content:</label>
+  <select id="justify">
+    <option value="flex-start">flex-start</option>
+    <option value="center">center</option>
+    <option value="flex-end">flex-end</option>
+    <option value="space-between">space-between</option>
+    <option value="space-around">space-around</option>
+  </select>
+
+  <label>Align Items:</label>
+  <select id="align">
+    <option value="flex-start">flex-start</option>
+    <option value="center">center</option>
+    <option value="flex-end">flex-end</option>
+    <option value="stretch">stretch</option>
+  </select>
+
+  <label>Flex Direction:</label>
+  <select id="direction">
+    <option value="row">row</option>
+    <option value="column">column</option>
+  </select>
+
+  <button onclick="aplicar()">Aplicar</button>
+</div>
+
+<p id="resultado"></p>
+<p id="puntaje">Puntaje: 0 | Intentos: 0</p>
+<p id="timer">Tiempo restante: 30s</p>
+<h3>🏅 Ranking</h3>
+<ul id="ranking"></ul>
+
+<script>
+const contenedor = document.getElementById('contenedor');
+const resultado = document.getElementById('resultado');
+const instruccion = document.getElementById('instruccion');
+const puntajeTxt = document.getElementById('puntaje');
+const timerTxt = document.getElementById('timer');
+const rankingList = document.getElementById('ranking');
+
+const colores = ["crimson", "seagreen", "steelblue", "orange", "purple", "teal"];
+const justifies = ["flex-start", "center", "flex-end", "space-between", "space-around"];
+const aligns = ["flex-start", "center", "flex-end", "stretch"];
+const directions = ["row", "column"];
+
+let puntaje = 0;
+let intentos = 0;
+let tiempo = 30;
+let timerInterval = null;
+let jugador = '';
+let ranking = [];
+
+function registrarJugador() {
+  jugador = document.getElementById('jugador').value || 'Anónimo';
+  document.getElementById('jugador').disabled = true;
+  alert(`¡Listo ${jugador}! Empieza el juego.`);
+  generarNivel();
+}
+
+function generarNivel() {
+  const numCajas = Math.floor(Math.random() * 3) + 4;
+  contenedor.innerHTML = '';
+  for(let i=0; i<numCajas; i++) {
+    const div = document.createElement('div');
+    div.className = "caja";
+    div.textContent = i+1;
+    div.style.background = colores[i % colores.length];
+    contenedor.appendChild(div);
+  }
+
+  const nivel = {
+    justify: justifies[Math.floor(Math.random()*justifies.length)],
+    align: aligns[Math.floor(Math.random()*aligns.length)],
+    direction: directions[Math.floor(Math.random()*directions.length)]
+  };
+
+  instruccion.textContent = `Instrucción: Justify=${nivel.justify}, Align=${nivel.align}, Direction=${nivel.direction}`;
+  contenedor.dataset.justify = nivel.justify;
+  contenedor.dataset.align = nivel.align;
+  contenedor.dataset.direction = nivel.direction;
+
+  document.getElementById('justify').value = 'flex-start';
+  document.getElementById('align').value = 'flex-start';
+  document.getElementById('direction').value = 'row';
+  contenedor.style.justifyContent = 'flex-start';
+  contenedor.style.alignItems = 'flex-start';
+  contenedor.style.flexDirection = 'row';
+  resultado.textContent = '';
+
+  tiempo = 30;
+  timerTxt.textContent = `Tiempo restante: ${tiempo}s`;
+  if(timerInterval) clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    tiempo--;
+    timerTxt.textContent = `Tiempo restante: ${tiempo}s`;
+    if(tiempo <= 0) {
+      clearInterval(timerInterval);
+      resultado.textContent = "¡Se acabó el tiempo! Nuevo nivel...";
+      ranking.push({jugador, puntaje});
+      actualizarRanking();
+      setTimeout(generarNivel, 1500);
+    }
+  }, 1000);
+}
+
+function aplicar() {
+  const justify = document.getElementById('justify').value;
+  const align = document.getElementById('align').value;
+  const direction = document.getElementById('direction').value;
+
+  contenedor.style.justifyContent = justify;
+  contenedor.style.alignItems = align;
+  contenedor.style.flexDirection = direction;
+
+  intentos++;
+  if(justify === contenedor.dataset.justify && align === contenedor.dataset.align && direction === contenedor.dataset.direction) {
+    puntaje += 10 + tiempo; // más rápido = más puntos
+    resultado.textContent = '¡Correcto! 🎉 Nivel siguiente...';
+    clearInterval(timerInterval);
+    ranking.push({jugador, puntaje});
+    actualizarRanking();
+    setTimeout(generarNivel, 1500);
+  } else {
+    puntaje = Math.max(0, puntaje - 1);
+    resultado.textContent = 'Intenta de nuevo 😅';
+  }
+  puntajeTxt.textContent = `Puntaje: ${puntaje} | Intentos: ${intentos}`;
+}
+
+function actualizarRanking() {
+  ranking.sort((a,b)=>b.puntaje - a.puntaje);
+  rankingList.innerHTML = '';
+  ranking.forEach(p => {
+    const li = document.createElement('li');
+    li.textContent = `${p.jugador}: ${p.puntaje} pts`;
+    rankingList.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>
