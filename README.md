@@ -20,7 +20,7 @@ El contenido está organizado por sesiones, cada una enfocada en un tema especí
 Al finalizar el bootcamp, tendrás los conocimientos necesarios para crear, versionar y desplegar aplicaciones web fullstack utilizando las tecnologías más demandadas en la industria.
 
 ## Autor
-Miguel CMO
+Miguel Angel Carrillo CMO
 
 ---
 

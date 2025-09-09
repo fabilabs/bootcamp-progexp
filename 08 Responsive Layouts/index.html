@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Hoy - Portal de Noticias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">
+            <h1>Noticias Hoy</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#politica">Política</a></li>
+            <li><a href="#economia">Economía</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+            <li><a href="#tecnologia">Tecnología</a></li>
+            <li><a href="#internacional">Internacional</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Barra lateral izquierda -->
+        <aside class="sidebar-left">
+            <div class="widget">
+                <h3>Noticias Destacadas</h3>
+                <ul>
+                    <li><a href="#">Elecciones presidenciales: últimos resultados</a></li>
+                    <li><a href="#">Nuevo tratado comercial firmado</a></li>
+                    <li><a href="#">Descubrimiento científico revolucionario</a></li>
+                    <li><a href="#">Copa Mundial: resultados de hoy</a></li>
+                </ul>
+            </div>
+            
+            <div class="widget">
+                <h3>Categorías Populares</h3>
+                <ul>
+                    <li><a href="#politica">Política (125)</a></li>
+                    <li><a href="#deportes">Deportes (89)</a></li>
+                    <li><a href="#tecnologia">Tecnología (67)</a></li>
+                    <li><a href="#economia">Economía (45)</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <article class="featured-article">
+                <img src="https://picsum.photos/800/400?random=1" alt="Noticia Principal">
+                <div class="article-content">
+                    <h2>Crisis Económica Global: Expertos Analizan las Consecuencias</h2>
+                    <p class="article-meta">Por <strong>María González</strong> | 9 de septiembre, 2025 | <span class="category">Economía</span></p>
+                    <p>Los principales economistas del mundo se reúnen esta semana para analizar el impacto de la reciente crisis financiera que ha afectado a los mercados globales. Las bolsas de valores han mostrado una volatilidad sin precedentes, mientras que los bancos centrales implementan medidas de emergencia para estabilizar sus monedas locales.</p>
+                    <p>El presidente del Banco Central Europeo declaró que "estamos enfrentando uno de los desafíos económicos más significativos de la última década", mientras que expertos en Wall Street predicen una recuperación gradual en los próximos 18 meses.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </article>
+
+            <div class="news-grid">
+                <article class="news-item">
+                    <img src="https://picsum.photos/300/200?random=2" alt="Noticia Política">
+                    <div class="news-content">
+                        <h3>Nuevo Proyecto de Ley Aprobado en el Congreso</h3>
+                        <p class="news-meta">2 horas ago | Política</p>
+                        <p>El congreso aprobó por mayoría una nueva legislación que impactará directamente en la educación pública del país...</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+
+                <article class="news-item">
+                    <img src="https://picsum.photos/300/200?random=3" alt="Noticia Deportes">
+                    <div class="news-content">
+                        <h3>Final del Campeonato Nacional: Equipos se Preparan</h3>
+                        <p class="news-meta">4 horas ago | Deportes</p>
+                        <p>Los dos equipos finalistas intensifican sus entrenamientos antes del partido decisivo del próximo domingo...</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+
+                <article class="news-item">
+                    <img src="https://picsum.photos/300/200?random=4" alt="Noticia Tecnología">
+                    <div class="news-content">
+                        <h3>Inteligencia Artificial: Nuevos Avances en Medicina</h3>
+                        <p class="news-meta">6 horas ago | Tecnología</p>
+                        <p>Investigadores desarrollan un sistema de IA capaz de detectar enfermedades raras con una precisión del 95%...</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside class="sidebar-right">
+            <div class="widget">
+                <h3>Tendencias</h3>
+                <div class="trending-topic">
+                    <img src="https://picsum.photos/100/80?random=5" alt="Tendencia 1">
+                    <div class="trending-content">
+                        <h4>Cambio Climático: Cumbre Mundial</h4>
+                        <p class="trending-meta">1 hora ago</p>
+                    </div>
+                </div>
+                <div class="trending-topic">
+                    <img src="https://picsum.photos/100/80?random=6" alt="Tendencia 2">
+                    <div class="trending-content">
+                        <h4>Nuevas Tecnologías 5G</h4>
+                        <p class="trending-meta">3 horas ago</p>
+                    </div>
+                </div>
+                <div class="trending-topic">
+                    <img src="https://picsum.photos/100/80?random=7" alt="Tendencia 3">
+                    <div class="trending-content">
+                        <h4>Festival de Cine Internacional</h4>
+                        <p class="trending-meta">5 horas ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir las últimas noticias</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <div class="widget">
+                <h3>Redes Sociales</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Sección de artículos adicionales -->
+    <section class="articles-section">
+        <h2>Más Noticias</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="https://picsum.photos/250/150?random=8" alt="Noticia Internacional">
+                <div class="card-content">
+                    <span class="category-tag">Internacional</span>
+                    <h3>Cumbre Internacional Sobre Seguridad</h3>
+                    <p>Líderes mundiales se reúnen para discutir nuevas estrategias de cooperación internacional...</p>
+                    <div class="card-meta">
+                        <span class="author">Por Juan Pérez</span>
+                        <span class="date">8 sep 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://picsum.photos/250/150?random=9" alt="Noticia Cultural">
+                <div class="card-content">
+                    <span class="category-tag">Cultura</span>
+                    <h3>Exposición de Arte Contemporáneo Abre sus Puertas</h3>
+                    <p>El museo nacional inaugura una nueva exposición con obras de artistas latinoamericanos...</p>
+                    <div class="card-meta">
+                        <span class="author">Por Ana Ruiz</span>
+                        <span class="date">7 sep 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://picsum.photos/250/150?random=10" alt="Noticia Salud">
+                <div class="card-content">
+                    <span class="category-tag">Salud</span>
+                    <h3>Nueva Vacuna Muestra Resultados Prometedores</h3>
+                    <p>Ensayos clínicos demuestran la efectividad de un nuevo tratamiento preventivo...</p>
+                    <div class="card-meta">
+                        <span class="author">Por Dr. Carlos Mendez</span>
+                        <span class="date">6 sep 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://picsum.photos/250/150?random=11" alt="Noticia Ambiental">
+                <div class="card-content">
+                    <span class="category-tag">Medio Ambiente</span>
+                    <h3>Proyecto de Reforestación Alcanza Meta Anual</h3>
+                    <p>La iniciativa nacional logra plantar más de un millón de árboles en zonas deforestadas...</p>
+                    <div class="card-meta">
+                        <span class="author">Por Laura Vega</span>
+                        <span class="date">5 sep 2025</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Noticias Hoy</h3>
+                <p>Tu fuente confiable de información actualizada las 24 horas del día.</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="#politica">Política</a></li>
+                    <li><a href="#economia">Economía</a></li>
+                    <li><a href="#deportes">Deportes</a></li>
+                    <li><a href="#tecnologia">Tecnología</a></li>
+                    <li><a href="#internacional">Internacional</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>📧 info@noticiashoy.com</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📍 123 Calle Principal, Ciudad, País</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Noticias Hoy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
