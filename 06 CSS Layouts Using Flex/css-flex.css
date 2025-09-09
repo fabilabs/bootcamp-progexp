@@ -54,7 +54,7 @@ body {
 }
 /* ejercicio 2 */
 .flex-container-2 {
-    display: flex;
+    display:flexbox;
     flex-direction: column;
 }
 
