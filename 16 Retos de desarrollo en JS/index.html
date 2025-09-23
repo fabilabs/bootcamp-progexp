@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp JavaScript - 5 Retos de Desarrollo</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Portada -->
+        <div class="slide active intro-slide">
+            <h1 class="intro-title">Bootcamp<br>Programación Explorador</h1>
+            <h2 class="intro-subtitle">Retos de Desarrollo</h2>
+            <div class="intro-info">
+                <p><strong>Duración:</strong> 120 horas (105 formación + 15 proyecto)</p>
+                <p><strong>Modalidad:</strong> 100% Virtual - 4 horas diarias</p>
+                <p><strong>Stack:</strong> HTML, CSS, JS → React → Next.js → Firebase/Supabase</p>
+            </div>
+            <div class="highlight">
+                <p><strong>🎯 Objetivo:</strong> Ejercicios progresivos que cubren desde fundamentos básicos hasta POO avanzada</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Reto 1 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">Reto 1: Sistema de Calificaciones</h1>
+                <!-- <p class="slide-subtitle">JavaScript Fundamentos</p> -->
+            </div>
+            <div class="slide-content">
+                <div class="challenge-card">
+                    <div class="challenge-title">
+                        Sistema de Calificaciones Estudiantiles
+                        <span class="challenge-level cl-basic">Básico</span>
+                    </div>
+                    <div class="challenge-description">
+                        Crear un sistema completo que calcule promedios, determine estados académicos y genere reportes detallados de estudiantes.
+                    </div>
+                    
+                    <div class="requirements-list">
+                        <h4>📋 Requerimientos:</h4>
+                        <ul>
+                            <li>Array de objetos estudiantes (nombre, edad, calificaciones)</li>
+                            <li>Función para calcular promedio individual</li>
+                            <li>Sistema de estados: Aprobado (≥70), Recuperación (60-69), Reprobado (<60)</li>
+                            <li>Identificar mejor y peor estudiante</li>
+                            <li>Generador de reportes completos</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-example">
+    <pre>
+    // Ejemplo de estructura de datos
+    const estudiantes = [
+        {
+            nombre: "Ana García",
+            edad: 20,
+            calificaciones: [85, 92, 78, 88, 90]
+        },
+        {
+            nombre: "Carlos López",
+            edad: 19,
+            calificaciones: [65, 70, 68, 72, 69]
+        }
+    ];
+    </pre>
+                </div>
+
+                    <div class="challenge-concepts">
+                        <div class="concepts-title">🎯 Conceptos que practica:</div>
+                        <div class="concepts-list">
+                            Arrays y objetos • Funciones • Bucles (for, forEach) • Condicionales • Métodos de array (find, sort, reduce) • Template literals
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Reto 2 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">Reto 2: Simulador de Tienda Online</h1>
+                <!-- <p class="slide-subtitle">JavaScript Fundamentos</p> -->
+            </div>
+            <div class="slide-content">
+                <div class="challenge-card">
+                    <div class="challenge-title">
+                        Sistema de E-commerce Básico
+                        <span class="challenge-level cl-intermediate">Intermedio</span>
+                    </div>
+                    <div class="challenge-description">
+                        Desarrollar un sistema completo de tienda online con inventario, carrito de compras, descuentos y procesamiento de pedidos.
+                    </div>
+                    
+                    <div class="requirements-list">
+                        <h4>📋 Funcionalidades:</h4>
+                        <ul>
+                            <li>Catálogo de productos con categorías y stock</li>
+                            <li>Sistema de carrito con validación de inventario</li>
+                            <li>Cálculo automático de descuentos (>$100 = 10% off)</li>
+                            <li>Procesamiento de compra y actualización de stock</li>
+                            <li>Buscador de productos por nombre</li>
+                            <li>Filtros por categoría y precio</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-example">
+    <pre>
+    // Estructura de producto
+    const productos = [
+        {
+            id: 1,
+            nombre: "Laptop Gaming",
+            precio: 1299.99,
+            stock: 5,
+            categoria: "tecnologia"
+        }
+    ];
+    </pre>
+                    </div>
+
+                    <div class="challenge-concepts">
+                        <div class="concepts-title">🎯 Conceptos que practica:</div>
+                        <div class="concepts-list">
+                            Manipulación de arrays complejos • Funciones con múltiples parámetros • Validaciones y manejo de errores • Operaciones matemáticas • Métodos avanzados (filter, map, reduce) • Estructuras condicionales anidadas
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Reto 3 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">Reto 3: Generador de Contraseñas</h1>
+                <!-- <p class="slide-subtitle">JavaScript Intermedio</p> -->
+            </div>
+            <div class="slide-content">
+                <div class="challenge-card">
+                    <div class="challenge-title">
+                        Sistema de Seguridad Completo
+                        <span class="challenge-level cl-advanced">Avanzado</span>
+                    </div>
+                    <div class="challenge-description">
+                        Crear un generador inteligente de contraseñas con validación avanzada, análisis de fortaleza y gestión de historial.
+                    </div>
+                    
+                    <div class="module-grid">
+                        <div class="requirements-list">
+                            <h4>🔐 Generador:</h4>
+                            <ul>
+                                <li>Longitud personalizable</li>
+                                <li>Incluir mayúsculas/números/símbolos</li>
+                                <li>Evitar caracteres ambiguos</li>
+                                <li>Múltiples algoritmos de generación</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements-list">
+                            <h4>✅ Validador:</h4>
+                            <ul>
+                                <li>Longitud mínima (8 caracteres)</li>
+                                <li>Verificar mayús/minús/números</li>
+                                <li>Detectar palabras prohibidas</li>
+                                <li>Calcular nivel de fortaleza</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="code-example">
+    <pre>
+    // Sistema de validación
+    function validarContraseña(password) {
+        const criterios = {
+            longitud: password.length >= 8,
+            mayuscula: /[A-Z]/.test(password),
+            minuscula: /[a-z]/.test(password),
+            numero: /\d/.test(password),
+            simbolo: /[!@#$%^&*]/.test(password)
+        };
+        return criterios;
+    }
+    </pre>
+                    </div>
+
+                    <div class="challenge-concepts">
+                        <div class="concepts-title">🎯 Conceptos que practica:</div>
+                        <div class="concepts-list">
+                            Manipulación de strings • Math.random() y Math.floor() • Regular expressions • Funciones con parámetros por defecto • Algoritmos de validación • Estructuras de datos (stack) • Funciones puras vs efectos secundarios
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Reto 4 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">Reto 4: Sistema de Biblioteca</h1>
+                <!-- <p class="slide-subtitle">POO Introducción</p> -->
+            </div>
+            <div class="slide-content">
+                <div class="challenge-card">
+                    <div class="challenge-title">
+                        Gestión Completa de Biblioteca
+                        <span class="challenge-level cl-intermediate">POO Intermedio</span>
+                    </div>
+                    <div class="challenge-description">
+                        Sistema orientado a objetos con múltiples clases interrelacionadas para gestionar préstamos, usuarios y reportes.
+                    </div>
+                    
+                    <div class="module-grid">
+                        <div class="requirements-list">
+                            <h4>📚 Clases Principales:</h4>
+                            <ul>
+                                <li><strong>Libro:</strong> ISBN, título, autor, disponibilidad</li>
+                                <li><strong>Usuario:</strong> Tipos (regular, premium, estudiante)</li>
+                                <li><strong>Biblioteca:</strong> Gestión centralizada</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements-list">
+                            <h4>⚙️ Funcionalidades:</h4>
+                            <ul>
+                                <li>Límites de préstamo por tipo de usuario</li>
+                                <li>Sistema de multas por retraso</li>
+                                <li>Reservas cuando no disponible</li>
+                                <li>Reportes y estadísticas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="code-example">
+    <pre>
+    class Libro {
+        constructor(isbn, titulo, autor, genero) {
+            this.isbn = isbn;
+            this.titulo = titulo;
+            this.autor = autor;
+            this.disponible = true;
+            this.fechaPrestamo = null;
+        }
+        
+        prestar() { /* lógica de préstamo */ }
+        devolver() { /* lógica de devolución */ }
+    }
+    </pre>
+                    </div>
+
+                    <div class="challenge-concepts">
+                        <div class="concepts-title">🎯 Conceptos que practica:</div>
+                        <div class="concepts-list">
+                            Constructores y propiedades • Métodos de instancia • Encapsulación básica • Interacción entre objetos • Validaciones en métodos • Arrays de objetos • Keyword 'this'
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Reto 5 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h1 class="slide-title">Reto 5: Juego RPG con Herencia</h1>
+                <!-- <p class="slide-subtitle">POO Avanzada</p> -->
+            </div>
+            <div class="slide-content">
+                <div class="challenge-card">
+                    <div class="challenge-title">
+                        Sistema de Combate RPG Completo
+                        <span class="challenge-level cl-advanced">POO Avanzado</span>
+                    </div>
+                    <div class="challenge-description">
+                        Juego completo con herencia, polimorfismo, diferentes clases de personajes y sistema de combate por turnos.
+                    </div>
+                    
+                    <div class="module-grid">
+                        <div class="requirements-list">
+                            <h4>⚔️ Clases de Personajes:</h4>
+                            <ul>
+                                <li><strong>Guerrero:</strong> + Vida, - Mana, Ataques físicos</li>
+                                <li><strong>Mago:</strong> - Vida, + Mana, Ataques mágicos</li>
+                                <li><strong>Arquero:</strong> Equilibrado, Ataques a distancia</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements-list">
+                            <h4>🎮 Sistemas del Juego:</h4>
+                            <ul>
+                                <li>Herencia y polimorfismo</li>
+                                <li>Sistema de habilidades únicas</li>
+                                <li>Combate por turnos</li>
+                                <li>Niveles y experiencia</li>
+                                <li>Efectos de estado</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="code-example">
+    <pre>
+    class Personaje {
+        constructor(nombre, nivel = 1) {
+            this.nombre = nombre;
+            this.vida = 100;
+            this.mana = 50;
+            this.nivel = nivel;
+        }
+    }
+
+    class Guerrero extends Personaje {
+        constructor(nombre) {
+            super(nombre);
+            this.vida = 150; // Más resistente
+            this.mana = 30;  // Menos mágico
+        }
+        
+        golpeCritico(objetivo) { /* habilidad única */ }
+    }
+    </pre>
+                    </div>
+
+                    <div class="challenge-concepts">
+                        <div class="concepts-title">🎯 Conceptos que practica:</div>
+                        <div class="concepts-list">
+                            Herencia con extends y super() • Polimorfismo • Métodos estáticos vs instancia • Encapsulación con getters/setters • Composición • Manejo de estados complejos • Algoritmos de IA básica
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-indicator">
+        <span id="current-slide">1</span> / <span id="total-slides">7</span>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn" onclick="changeSlide(-1)">← Anterior</button>
+        <button class="nav-btn" id="next-btn" onclick="changeSlide(1)">Siguiente →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+            document.getElementById('prev-btn').disabled = currentSlide === 0;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function changeSlide(direction) {
+            if (direction > 0 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction < 0 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            }
+        });
+        
+        // Inicializar
+        showSlide(0);
+    </script>
+</body>
+</html>
