@@ -1,0 +1,7 @@
+.neuromorph-btn {
+    box-shadow: 2px 2px 6px #bebebe, -2px -2px 6px #ffffff, inset 1px 1px 2px #ffffff, inset -1px -1px 2px #bebebe;
+    transition: box-shadow 0.3s;
+}
+.neuromorph-btn:active {
+    box-shadow: inset 2px 2px 6px #bebebe, inset -2px -2px 6px #ffffff;
+}
