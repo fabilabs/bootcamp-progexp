@@ -111,8 +111,8 @@ export default function AuthPage() {
             }}
           >
             {isLogin
-              ? "¿No tienes cuenta? Regístrate aquí"
-              : "¿Ya tienes cuenta? Inicia sesión"}
+              ? "¿No tienes cuenta??? Regístrate aquí"
+              : "¿Ya tienes cuenta??? Inicia sesión"}
           </button>
         </div>
       </div>
